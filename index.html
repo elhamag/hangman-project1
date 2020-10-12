@@ -7,10 +7,17 @@
     <link href="./style.css" rel="stylesheet">
 </head>
 <body>
-<div class = "container">
+    <div id = "home">
+        <div class="title">HANGMAN</div>
+        <div class="homeScreen">
+        <div class="button" onclick="startGame()">PLAY</div>
+        <div class="footer">Coded by Elham G. Azizi</div>
+    </div>
+        </div>
+<div class = "container hidden" id = "keyboard"> 
     <div class="game-info">
         <div class="game-name">Hangman</div>
-        <div class="gategor">
+        <div class="category">
             word from: <span></span>
         </div>
     </div>
@@ -29,10 +36,14 @@
                 </div>
             </div>
         </div>
-        <div class="letters"></div>
+        <div class="letters">
+
+        </div>
     </div>
     <hr>
-    <div class="letter-guess"></div>
+    <div class="letter-guess span"></div>
+    <div class="footer">Coded by Elham G. Azizi</div>
+
 </div>
 
 
