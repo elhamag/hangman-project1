@@ -108,7 +108,7 @@ document.querySelector(".game-info .category span").innerHTML = randomProperKey 
 
 //select letters guess element\
 let lettersGuessContainer = document.querySelector(".letter-guess");
-//console.log(lettersGuessContainer);
+// console.log(lettersGuessContainer); it shows how many spans has been created based on the picked word.
 //convert chosen word to Array like ["k", "i", "m", " ", "k", "a", "r", "d", "a", "s", "h", "i", "a", "n"]
 let lettersAndSpace = Array.from(randomValueValue);
 //console.log(lettersAndSpace);
@@ -124,11 +124,7 @@ lettersAndSpace.forEach(letter => {
 
   // If Letter Is Space
   if (letter === " ") {
-      //console.log("found ")
-
-
-    //let current = document.createTextNode(letter);
-    //   currentDiv.appendChild(current);
+      //console.log(" ")
 
 
     // Add Class To The Span
@@ -162,18 +158,18 @@ document.addEventListener("click", (e) => {
         //get clicked letter 
         let theClickLetter = e.target.innerHTML. toLowerCase();
 
-        // console.log(theClickLetter);
+        //console.log(theClickLetter);
 
-        //the chosen word 
+        //the chosen word ----> it will show all the letters and spaces
 let theChosenWord = Array.from(randomValueValue.toLowerCase());
-
+//console.log(theChosenWord);
         
         
 lettersAndSpace.forEach((wordLtter, wordIndex) => {
 
     // if the click letter equal to one the chosen word letter 
     if (theClickLetter == wordLtter){
-        //console.log(`found at indext number ${wordIndex}`);
+        //console.log(`found at indext number ${wordIndex}`); //it shows the index numbers inside the box
 
         //set status to correct 
         theStatus = true;
@@ -234,5 +230,10 @@ function endGame() {
 
    
   
-  }
- 
+//   }
+//   document.getElementById("restart").onclick = setup;
+
+//     /* reset letter to guess on click */
+//     guessInput.onclick = function () {
+//         this.value = '';
+    };
