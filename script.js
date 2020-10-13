@@ -204,19 +204,21 @@ theDraw.classList.add(`wrong-${wrongAttempts}`);
             endGame();
     
             lettersContainer.classList.add("finished");
-    
+            //document.getElementById("game").style.backgroundColor = "white";
           }
     }
+    
 });
 
 //endgame function
 function endGame() {
 
+console.log(game);
     // Create Popup Div
     let div = document.createElement("div");
   
     // Create Text
-    let divText = document.createTextNode(`Game Over, The Word Is ${randomValueValue}`);
+    let divText = document.createTextNode(`GAME OVER "/n" The Word Is ${randomValueValue}`);
     console.log(divText);
   
     // Append Text To Div
@@ -227,13 +229,20 @@ function endGame() {
   
     // Append To The Body
     document.body.appendChild(div);
+    
+  }
 
-   
-  
-//   }
-//   document.getElementById("restart").onclick = setup;
+  document.getElementById("restart").addEventListener('click', reset)
+  function reset(){
+      location.reload();
+  }
 
-//     /* reset letter to guess on click */
-//     guessInput.onclick = function () {
-//         this.value = '';
-    };
+
+
+
+
+
+    /* reset letter to guess on click */
+    //guessInput.onclick = function () {
+        //this.value = '';
+    //};
