@@ -132,7 +132,7 @@ document.addEventListener("click", (e) => {
 
         function winGame() {
             let div = document.createElement("div");
-            let divText = document.createTextNode(`YOU WIN`);
+            let divText = document.createTextNode(`Congratulations! You won!😃`);
             div.appendChild(divText);
             div.className = 'popup';
             document.body.appendChild(div);
@@ -174,7 +174,7 @@ function endGame() {
 	//let divText = document.createTextNode(`GAME OVER the key word is "${randomValueValue}"`);
 	////console.log(divText);
     // Append Text To Div
-    let p1text = document.createTextNode(`GAMEOVER`);
+    let p1text = document.createTextNode(`GAMEOVER 😕`);
     let p2text = document.createTextNode(`the key word is "${randomValueValue}"`);
 
     p1.appendChild(p1text);
