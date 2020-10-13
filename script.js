@@ -1,12 +1,7 @@
-// //console.log("working!");
-// function startGame(event){
-// const button = document.querySelector(".button");
-// console.log(button);
-// event.addEventListener('onclick', button);
-// }
+
 function startGame() {
 	gId("home").className = "hidden"
-		// gId("result").className = "hidden"
+		
 	newGame()
 }
 
@@ -43,16 +38,16 @@ lettersArray.forEach(letter => {
 });
 // object of words + categories 
 const words = {
-		programming: ["javascript", "python", "java", "fortan", "go", "php"],
+		programming: ["javascript", "python", "java", "fortran", "go", "php"],
 		movies: ["incedious", "coco", "extraction", "onward", "underwater", "emma", "intuition"],
-		people: ["abraham lincoln", "barak obama", "donald trump", "kim kardashian", "beyonce"],
-		countries: ["united states", "iran", "japan", "egypt", "germany", "qatar", "yemen"]
+		people: ["abraham lincoln", "barak obama", "donald trump", "kim kardashian", "beyonce", "shakira"],
+		countries: ["united states", "iran", "japan", "egypt", "germany", "qatar", "yemen", "india", "china", "russia"]
 	}
 	//get random property: keys are programming, movies, people and countries.use object for key function. allKeys is collection of all keys and words that is programinf, movies and countries. 
 let allKeys = Object.keys(words);
 //console.log(allKeys);
 // //random number depend on keys length
-// /ath.floor = integer values from double and fl/length is the size of the class.
+// Math.floor = integer values from double and fl/length is the size of the class.
 // //Moat 
 // // Math.random = float value betwee 0 and 1
 // //how many categories we have. allKeys.length
@@ -186,10 +181,12 @@ function endGame() {
     p2.appendChild(p2text);
 	div.appendChild(p1);
     div.appendChild(p2);
-    // Add Class On Div
+
     div.className = 'popup';
-    
-	// Append To The Body
+    setInterval(function(popup){
+        $("div").toggleClass("class2");
+        },100)
+	
 	document.body.appendChild(div);
 }
 document.getElementById("restart").addEventListener('click', reset)
@@ -197,7 +194,4 @@ document.getElementById("restart").addEventListener('click', reset)
 function reset() {
 	location.reload();
 }
-/* reset letter to guess on click */
-//guessInput.onclick = function () {
-//this.value = '';
-//};
+       
