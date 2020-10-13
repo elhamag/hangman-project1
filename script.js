@@ -142,11 +142,18 @@ lettersGuessContainer.appendChild(emptySpan);
 //select guess spans
 let guessSpans =document.querySelectorAll(".letter-guess span");
 
-//set 
+ 
+//set wrong attempts
+let wrongAttempts = 0;
 
+//select the draw elements.
+let theDraw = document.querySelector(".hangman-draw");
 
  //add clicking letter 
 document.addEventListener("click", (e) => {
+
+    //set the chose status
+    let theStatus = false;
 
     if (e.target.className === 'letter-box'){
         e.target.classList.add("clicked");
@@ -158,7 +165,7 @@ document.addEventListener("click", (e) => {
         // console.log(theClickLetter);
 
         //the chosen word 
-lettheChosenWord = Array.from(randomValueValue.toLowerCase());
+let theChosenWord = Array.from(randomValueValue.toLowerCase());
 
         
         
@@ -166,7 +173,11 @@ lettersAndSpace.forEach((wordLtter, wordIndex) => {
 
     // if the click letter equal to one the chosen word letter 
     if (theClickLetter == wordLtter){
-        console.log(`found at indext number ${wordIndex}`);
+        //console.log(`found at indext number ${wordIndex}`);
+
+        //set status to correct 
+        theStatus = true;
+
 
         // loop on all guess spans
         guessSpans.forEach((span, spanIndex) => {
@@ -181,7 +192,47 @@ lettersAndSpace.forEach((wordLtter, wordIndex) => {
     }
 })
 
+// outside of loop
+//console.log(theStatus);
+
+//if the letter is wrong
+if (theStatus !== true){
+
+//increase the wrong attempts 
+wrongAttempts++;
+//add class wrong the draw elements
+theDraw.classList.add(`wrong-${wrongAttempts}`);
+        }
+        if (wrongAttempts === 8) {
+
+            endGame();
+    
+            lettersContainer.classList.add("finished");
+    
+          }
     }
 });
 
+//endgame function
+function endGame() {
+
+    // Create Popup Div
+    let div = document.createElement("div");
+  
+    // Create Text
+    let divText = document.createTextNode(`Game Over, The Word Is ${randomValueValue}`);
+    console.log(divText);
+  
+    // Append Text To Div
+    div.appendChild(divText);
+  
+    // Add Class On Div
+    div.className = 'popup';
+  
+    // Append To The Body
+    document.body.appendChild(div);
+
+   
+  
+  }
  
