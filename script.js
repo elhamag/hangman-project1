@@ -130,7 +130,7 @@ document.addEventListener("click", (e) => {
 		if(userWord.length === lettersAndSpace.length) winGame();
 	
 
-        function WinGame() {
+        function winGame() {
             let div = document.createElement("div");
             let divText = document.createTextNode(`YOU WIN`);
             div.appendChild(divText);
@@ -181,12 +181,10 @@ function endGame() {
     p2.appendChild(p2text);
 	div.appendChild(p1);
     div.appendChild(p2);
-
+    // Add Class On Div
     div.className = 'popup';
-    setInterval(function(popup){
-        $("div").toggleClass("class2");
-        },100)
-	
+    
+	// Append To The Body
 	document.body.appendChild(div);
 }
 document.getElementById("restart").addEventListener('click', reset)
@@ -194,4 +192,3 @@ document.getElementById("restart").addEventListener('click', reset)
 function reset() {
 	location.reload();
 }
-       
