@@ -19,8 +19,8 @@ to play the game immediately: https://happy-curran-a46978.netlify.app/
 
 ## Game Play
 
-![gameplay](homapage.png)
-![gameplay](homapage2.png)
+![gameplay](homepage.png)
+![gameplay](homepage2.png)
 ![gameplay](homepage3.png)
 ![gameplay](homepage4.png)
 
