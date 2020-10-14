@@ -15,3 +15,7 @@ https://happy-curran-a46978.netlify.app/
 
 
 ## Technologies used:
+=======
+- CSS
+- HTML
+- Javascript
