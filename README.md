@@ -12,3 +12,6 @@ Hangman is a game in which player guess letters to spell a word in a given categ
 https://happy-curran-a46978.netlify.app/
 
 ## Wireframe:
+- CSS
+- HTML
+- Javascript
