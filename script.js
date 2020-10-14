@@ -39,9 +39,9 @@ lettersArray.forEach(letter => {
 // object of words + categories 
 const words = {
 		programming: ["javascript", "python", "java", "fortran", "go", "php"],
-		movies: ["incedious", "coco", "extraction", "onward", "underwater", "emma", "intuition"],
-		people: ["abraham lincoln", "barak obama", "donald trump", "kim kardashian", "beyonce", "shakira"],
-		countries: ["united states", "iran", "japan", "egypt", "germany", "qatar", "yemen", "india", "china", "russia"]
+		movies: ["avetar", "titanic","bad boys","joker","aladden","coco", "onward", "underwater"],
+		people: ["abraham lincoln", "bill gates", "shakira", "brad pitt","drake"],
+		countries: ["united states", "iran", "japan", "germany", "russia"]
 	}
 	//get random property: keys are programming, movies, people and countries.use object for key function. allKeys is collection of all keys and words that is programinf, movies and countries. 
 let allKeys = Object.keys(words);
