@@ -17,14 +17,6 @@ To play the game immediately: https://happy-curran-a46978.netlify.app/
 
 ![wireframe](wireframe.png)
 
-## Game play:
-
-![gameplay](homepage.png)
-![gameplay](homepage2.png)
-![gameplay](homepage3.png)
-![gameplay](homepage4.png)
-![gameplay](homepage5.png)
-
 ## Structure
 
 To do the game, we will need four different data structures to play the game. This structures are the following:
@@ -32,7 +24,15 @@ To do the game, we will need four different data structures to play the game. Th
 - Words. An array with some words. We will take a random word from this array, and it will be the word that the player will have to figure out.
 - Errors left. Number of errors that the user can make until the end of the game.
 - Secret word. This will be an string to store the word selected randomly.
-- Letters. Another array, in this case just for letters. 
+- Letters. Another array, in this case just for letters.
+
+## Game play:
+
+![gameplay](homepage.png)
+![gameplay](homepage2.png)
+![gameplay](homepage3.png)
+![gameplay](homepage4.png)
+![gameplay](homepage5.png)
 
 
 ## Technologies used:
