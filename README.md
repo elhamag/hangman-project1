@@ -15,6 +15,7 @@ to play the game immediately: https://happy-curran-a46978.netlify.app/
 
 ## Wireframe:
 
+![wireframe](wireframe.png)
 
 ## Technologies used:
 - CSS
